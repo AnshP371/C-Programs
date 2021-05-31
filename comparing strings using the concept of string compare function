@@ -1,0 +1,25 @@
+#include <stdio.h>
+int stringcompare(const char *string_1 , const char *string_2)
+{
+    int i =0;
+    int j =0;
+    while(string_1[i]==string_2[j] && string_1[i]!='\0')
+    {
+        i++;
+        j++;
+    }
+    return string_1[i]-string_2[j];
+    
+}
+void main() {
+    int value = 0;
+   char *string_1 = "String";
+   char * string_2 = "String";
+   value = stringcompare(string_1,string_2);
+   if(value == 0)
+   {
+       printf("The strings are equal\n");
+   }
+   else
+   printf("The strings are not equal and have a value:%d",value);
+}
