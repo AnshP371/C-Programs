@@ -1,0 +1,19 @@
+#include <stdio.h>
+  int find_length(char *pointer)
+  {
+  int count=0;
+  while(*(pointer)!='\0')
+  {
+  count++;
+  pointer++;
+  }
+  return count;
+  }
+  void main() {
+  int string_length=0;
+  char string[100];
+  printf("Enter the size of the string\n");
+  gets(string);
+  string_length = find_length(string);
+  printf("The lenght of the string entered is :%d",string_length);
+  }
