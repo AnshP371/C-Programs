@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include<string.h>
+void main() {
+    int i = 0;
+    char arr[50];
+    char string[50];
+    char *ptr;
+    printf("Enter the string you want to reverse:\n");
+    scanf("%s",&string);
+    ptr=string;
+    int length = strlen(ptr);
+    int total_length= length-1;
+    for(i=0;i<length;i++)
+    {
+        arr[i]=ptr[total_length-i];    
+    }
+    printf("The reverse of the string %s is %s\n",string,arr);
+}
