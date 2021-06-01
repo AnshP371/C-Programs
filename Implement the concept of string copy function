@@ -1,0 +1,23 @@
+#include <stdio.h>
+char stringcopy(char arr[],const char *string)
+{
+  
+    int i = 0;
+    while(*string!='\0')
+    {
+        arr[i] = *string;
+        string++;
+        i++;
+    }
+    printf("the copied value is : %s",arr);
+    
+}
+void main() {
+    char arr[100];
+    char Originial_String[100];
+    char *character_pointer;
+    printf("Enter the string you want to copy:\n");
+    scanf("%s",& Originial_String);
+    character_pointer = &Originial_String;
+    stringcopy(arr,character_pointer);
+}
