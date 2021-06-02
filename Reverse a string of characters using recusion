@@ -11,3 +11,22 @@ int main() {
    reverse();
    return 0;
 }
+
+// another way of reversing string using recursion and char pointer =>
+
+#include <stdio.h>
+void rev(char *a)
+{
+    if(*a!='\0')
+    {
+        rev(a+1);
+        putchar(*a);
+    }
+    
+}
+int main() {
+    char *string = "abcd";
+    rev(string);
+    
+    return 0;
+}
