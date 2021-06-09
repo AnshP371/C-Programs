@@ -1,0 +1,36 @@
+#include<stdio.h>
+void
+printarray (int array[], int num)
+{
+  int i = 0;
+  for (i = 0; i < num; i++)
+    {
+      printf ("%d", array[i]);
+    }
+}
+
+void
+reverse_array (int array[], int low, int high)
+{
+  int temp;
+  while (low < high)
+    {
+      temp = array[low];
+      array[low] = array[high];
+      array[high] = temp;
+      low++;
+      high--;
+    }
+}
+
+void
+main ()
+{
+  int array_1[4] = { 1, 2, 3, 4 };
+  printarray (array_1, 4);
+  printf ("\n");
+  printf ("The reverse of the array is is :\n");
+  reverse_array (array_1, 0, 3);
+  printarray (array_1, 4);
+
+}
